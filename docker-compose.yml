@@ -1,0 +1,11 @@
+name: pocket-js-server
+
+services:
+  pg:
+    image: bitnami/postgresql:15
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRESQL_USER=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=inorbit
