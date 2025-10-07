@@ -1,9 +1,7 @@
-import { and, count, eq, gte, lte, sql } from 'drizzle-orm'
+import { and, eq, gte, lte, sql } from 'drizzle-orm'
 import { db } from '../db'
 import { goalCompletions, goals } from '../db/schema'
 import dayjs from 'dayjs'
-import { title } from 'process'
-import { create } from 'domain'
 
 export async function getWeekSummary() {
   const lastDayOfWeek = dayjs().endOf('week').toDate() //Retorna o ultimo dia da semana
